@@ -9,17 +9,17 @@ def clear():
 # If there are other bidders, call clear()
 # 5. After the last user has put in their bid, iterate through the list and find the highest bid and his/her bidder
 
-# # 1
-# auction_list = [
-#     {
-#         "name": "frank",
-#         "bid": 200
-#     },
-#     {
-#         "name": "john",
-#         "bid": 300
-#     },
-# ]
+# 1
+auction_list = [
+    {
+        "name": "frank",
+        "bid": 200
+    },
+    {
+        "name": "john",
+        "bid": 300
+    },
+]
 
 # # 2
 # def get_bid_info():
