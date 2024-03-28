@@ -1,5 +1,6 @@
-def clear():
-    print("\033[2J\033[H", end="", flush=True)
+import os
+# def clear():
+#     print("\033[2J\033[H", end="", flush=True)
 
 
 # 1. Create list that will contain dictionaries
@@ -23,19 +24,6 @@ auction_list = [
 ]
 
 
-# 2
-def get_bid_info():
-    name = input("What is your name?: ")
-    bid = int(input("What is your bid?: $"))
-    add_to_list(name, bid)
-
-
-# #4
-# other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.")
-# if other_bidders == 'yes':
-#   clear()
-#   get_bid_info()
-#
 # 3
 def add_to_list(user_name, user_bid):
     bid_info = {
@@ -45,6 +33,23 @@ def add_to_list(user_name, user_bid):
     auction_list.append(bid_info)
 
 
+# 2
+def get_bid_info():
+    name = input("What is your name?: ")
+    bid = int(input("What is your bid?: $"))
+    add_to_list(name, bid)
+
+
+get_bid_info()
+# 4
+other_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ")
+if other_bidders == 'yes':
+    print("You typed yes")
+    os.system('cls')
+    get_bid_info()
+
+# 3
+
 # #5
 # def get_highest_bid():
 #   highest_bid = auction_list[0]['bid']
@@ -53,4 +58,3 @@ def add_to_list(user_name, user_bid):
 #
 # print(auction_list[0]['bid'])
 # print("text")
-clear()
