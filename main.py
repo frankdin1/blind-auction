@@ -21,12 +21,12 @@ auction_list = [
     },
 ]
 
-# # 2
-# def get_bid_info():
-#   name = input("What is your name?: ")
-#   bid = int(input("What is your bid?: $"))
-#   add_to_list(name, bid)
-#
+# 2
+def get_bid_info():
+  name = input("What is your name?: ")
+  bid = int(input("What is your bid?: $"))
+  add_to_list(name, bid)
+
 # #4
 # other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.")
 # if other_bidders == 'yes':
