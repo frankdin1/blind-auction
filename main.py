@@ -67,7 +67,4 @@ def more_bidders():
 
 get_bid_info()
 more_bidders()
-print(get_highest_bid_info())
-# largest_bid = get_highest_bid_info()
-# print(largest_bid[0])
-# print("text")
+print(f"The winner is {get_highest_bid_info()[0]} with a bid of ${get_highest_bid_info()[1]}")
