@@ -59,12 +59,24 @@ def bid_item():
     item = input("What item are you bidding on? ")
     print(f"Bid item -> {item}")
 
+
+def next_auction():
+    another_auction = input("Do you want to perform another auction? Type 'yes or 'no: ").lower()
+    while True:
+        if another_auction == 'yes':
+            perform_auction()
+        elif another_auction == 'no':
+            break
+        break
+
+
 def perform_auction():
     bid_item()
     get_bid_info()
     more_bidders()
     highest_bid_info = get_highest_bid_info()
     print(f"The winner is {highest_bid_info[0]} with a bid of ${highest_bid_info[1]}")
+    next_auction()
 
 
 perform_auction()
