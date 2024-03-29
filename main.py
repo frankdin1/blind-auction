@@ -14,14 +14,14 @@ import os
 
 # 1
 auction_list = [
-    {
-        "name": "frank",
-        "bid": 200
-    },
-    {
-        "name": "john",
-        "bid": 300
-    },
+    # {
+    #     "name": "frank",
+    #     "bid": 200
+    # },
+    # {
+    #     "name": "john",
+    #     "bid": 300
+    # },
 ]
 
 
@@ -41,13 +41,6 @@ def get_bid_info():
     add_to_list(name, bid)
 
 
-# 4
-# other_bidders = input("Are there any other bidders? Type 'yes' or 'no': ").lower()
-# if other_bidders == 'yes':
-#     os.system('cls')
-#     get_bid_info()
-
-
 # 5
 def get_highest_bid_info():
     highest_bid = auction_list[0]['bid']
@@ -59,6 +52,22 @@ def get_highest_bid_info():
     return highest_bidder, highest_bid
 
 
+# 4
+def more_bidders():
+    other_bidders = input("Are there any other bidders? Type 'yes' or 'no': ").lower()
+    while True:
+        if other_bidders == 'yes':
+            os.system('cls')
+            get_bid_info()
+            more_bidders()
+        elif other_bidders == 'no':
+            break
+        break
+
+
+get_bid_info()
+more_bidders()
+print(get_highest_bid_info())
 # largest_bid = get_highest_bid_info()
 # print(largest_bid[0])
 # print("text")
