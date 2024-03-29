@@ -67,7 +67,8 @@ def more_bidders():
 def perform_auction():
     get_bid_info()
     more_bidders()
-    print(f"The winner is {get_highest_bid_info()[0]} with a bid of ${get_highest_bid_info()[1]}")
+    highest_bid_info = get_highest_bid_info()
+    print(f"The winner is {highest_bid_info[0]} with a bid of ${highest_bid_info[1]}")
 
 
 perform_auction()
