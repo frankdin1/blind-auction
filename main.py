@@ -44,7 +44,7 @@ def get_bid_info():
 # 5
 def get_highest_bid_info():
     highest_bid = auction_list[0]['bid']
-    highest_bidder = ""
+    highest_bidder = auction_list[0]['name']
     for bid_num in range(len(auction_list)):
         if highest_bid < auction_list[bid_num]['bid']:
             highest_bid = auction_list[bid_num]['bid']
@@ -64,7 +64,10 @@ def more_bidders():
             break
         break
 
+def perform_auction():
+    get_bid_info()
+    more_bidders()
+    print(f"The winner is {get_highest_bid_info()[0]} with a bid of ${get_highest_bid_info()[1]}")
 
-get_bid_info()
-more_bidders()
-print(f"The winner is {get_highest_bid_info()[0]} with a bid of ${get_highest_bid_info()[1]}")
+
+perform_auction()
