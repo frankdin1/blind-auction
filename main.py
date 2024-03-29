@@ -13,16 +13,7 @@ import os
 # 5. After the last user has put in their bid, iterate through the list and find the highest bid and his/her bidder
 
 # 1
-auction_list = [
-    # {
-    #     "name": "frank",
-    #     "bid": 200
-    # },
-    # {
-    #     "name": "john",
-    #     "bid": 300
-    # },
-]
+auction_list = []
 
 
 # 3
@@ -64,7 +55,12 @@ def more_bidders():
             break
         break
 
+def bid_item():
+    item = input("What item are you bidding on? ")
+    print(f"Bid item -> {item}")
+
 def perform_auction():
+    bid_item()
     get_bid_info()
     more_bidders()
     highest_bid_info = get_highest_bid_info()
