@@ -1,4 +1,5 @@
 import os
+
 # def clear():
 #     print("\033[2J\033[H", end="", flush=True)
 
@@ -40,21 +41,24 @@ def get_bid_info():
     add_to_list(name, bid)
 
 
-get_bid_info()
 # 4
-other_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ")
-if other_bidders == 'yes':
-    print("You typed yes")
-    os.system('cls')
-    get_bid_info()
+# other_bidders = input("Are there any other bidders? Type 'yes' or 'no': ").lower()
+# if other_bidders == 'yes':
+#     os.system('cls')
+#     get_bid_info()
 
-# 3
 
-# #5
-# def get_highest_bid():
-#   highest_bid = auction_list[0]['bid']
-#   highest_bidder = ""
-#   for bid in auction_list:
-#
-# print(auction_list[0]['bid'])
+# 5
+def get_highest_bid_info():
+    highest_bid = auction_list[0]['bid']
+    highest_bidder = ""
+    for bid_num in range(len(auction_list)):
+        if highest_bid < auction_list[bid_num]['bid']:
+            highest_bid = auction_list[bid_num]['bid']
+            highest_bidder = auction_list[bid_num]['name']
+    return highest_bidder, highest_bid
+
+
+# largest_bid = get_highest_bid_info()
+# print(largest_bid[0])
 # print("text")
